@@ -1,0 +1,446 @@
+2026-01-02 17:00:03,322 ERROR [input]              IOUtils.java:278  | Unmapping is not supported.
+java.lang.reflect.InaccessibleObjectException: Unable to make public jdk.internal.ref.Cleaner java.nio.DirectByteBuffer.cleaner() accessible: module java.base does not "opens java.nio" to unnamed module @e1de817
+	at java.base/java.lang.reflect.AccessibleObject.throwInaccessibleObjectException(Unknown Source)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.AccessibleObject.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.Method.checkCanSetAccessible(Unknown Source)
+	at java.base/java.lang.reflect.Method.setAccessible(Unknown Source)
+	at org.apache.pdfbox.io.IOUtils.unmapper(IOUtils.java:244)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.apache.pdfbox.io.IOUtils.<clinit>(IOUtils.java:69)
+	at org.apache.pdfbox.Loader.loadPDF(Loader.java:378)
+	at org.audiveris.omr.image.ImageLoading.getPdfLoader(ImageLoading.java:159)
+	at org.audiveris.omr.image.ImageLoading.getLoader(ImageLoading.java:209)
+	at org.audiveris.omr.sheet.Book.createStubs(Book.java:557)
+	at org.audiveris.omr.CLI$ProcessingTask.processBook(CLI.java:830)
+	at org.audiveris.omr.CLI$CliTask.call(CLI.java:504)
+	at org.audiveris.omr.Main.runBatchTasks(Main.java:371)
+	at org.audiveris.omr.Main.main(Main.java:260)
+	at Audiveris.main(Audiveris.java:50)
+2026-01-02 17:00:03,349 INFO [input]                 Book.java:562  | 8 sheets in C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:00:03,417 INFO []                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:00:03,417 INFO []                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:00:03,421 INFO []                 Book.java:1933 | Book reaching PAGE on sheets:[#1#2#3#4#5#6#7#8]
+2026-01-02 17:00:03,422 INFO [input#1]       StepMonitoring.java:98   | LOAD
+2026-01-02 17:00:03,614 INFO [input#1]            SheetStub.java:1268 | Loaded image #1 2478x3507 from C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:00:03,617 INFO [input#1]       StepMonitoring.java:98   | BINARY
+2026-01-02 17:00:03,945 INFO [input#1]       StepMonitoring.java:98   | SCALE
+2026-01-02 17:00:03,965 INFO [input#1]         ScaleBuilder.java:241  | Beam  guessed height: 10 -- 0.50 of 19 interline
+2026-01-02 17:00:03,966 INFO [input#1]         ScaleBuilder.java:264  | Beam measured height: 11 -- 0.43 of [5..19] range at 515% of needed quorum
+2026-01-02 17:00:03,967 INFO [input#1]            ScaleStep.java:65   | Scale{ interline(17,19,20) line(2,3,5) beam(11)}
+2026-01-02 17:00:03,967 INFO [input#1]       StepMonitoring.java:98   | GRID
+2026-01-02 17:00:04,362 INFO [input#1]       LinesRetriever.java:1500 | Global slope: 0.00000
+2026-01-02 17:00:04,389 INFO [input#1]    ClustersRetriever.java:328  | Retrieved raw line clusters: 10 of sizes [5] with interline(17,19,20)
+2026-01-02 17:00:04,553 INFO [input#1]            PeakGraph.java:310  | Systems: #1[1, 2] #2[3, 4] #3[5, 6] #4[7, 8] #5[9, 10]
+2026-01-02 17:00:04,896 INFO [input#1]        SystemManager.java:779  | 1 part along 5 systems
+2026-01-02 17:00:04,897 INFO [input#1]                 Book.java:545  | Created scores: [{Score 1}]
+2026-01-02 17:00:04,898 INFO [input#1]       StepMonitoring.java:98   | HEADERS
+2026-01-02 17:00:05,057 INFO [input#1]      BasicClassifier.java:277  | Classifier loaded XML norms.
+2026-01-02 17:00:05,063 INFO [input#1]   AbstractClassifier.java:396  | Classifier data loaded from default uri jar:file:/C:/Program%20Files/Audiveris/app/audiveris.jar!/res/basic-classifier.zip
+2026-01-02 17:00:05,723 INFO [input#1]       StepMonitoring.java:98   | STEM_SEEDS
+2026-01-02 17:00:05,776 INFO [input#1]        StemSeedsStep.java:86   | stem(5 max:5)
+2026-01-02 17:00:05,823 INFO [input#1]       StepMonitoring.java:98   | BEAMS
+2026-01-02 17:00:07,873 INFO [input#1]       StepMonitoring.java:98   | LEDGERS
+2026-01-02 17:00:08,063 INFO [input#1]       StepMonitoring.java:98   | HEADS
+2026-01-02 17:00:10,693 INFO [input#1]        HeadSeedTally.java:235  | Scale information: HeadSeeds{NOTEHEAD_VOID[L:-0.6] NOTEHEAD_BLACK[L:-0.6,R:-1.3]}
+2026-01-02 17:00:10,693 INFO [input#1]       StepMonitoring.java:98   | STEMS
+2026-01-02 17:00:11,363 INFO [input#1]       StepMonitoring.java:98   | REDUCTION
+2026-01-02 17:00:11,481 INFO [input#1]        ReductionStep.java:105  | Stems free length median value: 65 pixels, 3.4 interlines
+2026-01-02 17:00:11,486 INFO [input#1]       StepMonitoring.java:98   | CUE_BEAMS
+2026-01-02 17:00:11,486 INFO [input#1]         CueBeamsStep.java:81   | Step CUE_BEAMS is skipped because small heads switch is off
+2026-01-02 17:00:11,486 INFO [input#1]       StepMonitoring.java:98   | TEXTS
+2026-01-02 17:00:12,319 INFO [input#1]             TextWord.java:268  |    Abnormal font ratio 2.08 TextWord{ "—-"-=" bounds[1286,2037,147,28] conf:0.78 base[1286,2063]-[1433,2065] codes[2014,2d,22,2d,3d] FontInfo{Verdana_Bold B-26}}
+2026-01-02 17:00:12,347 INFO [input#1]       StepMonitoring.java:98   | MEASURES
+2026-01-02 17:00:12,354 INFO [input#1]                 Page.java:307  | 17 raw measures: [5 in system#1, 4 in system#2, 3 in system#3, 3 in system#4, 2 in system#5]
+2026-01-02 17:00:12,354 INFO [input#1]       StepMonitoring.java:98   | CHORDS
+2026-01-02 17:00:12,371 INFO [input#1]       StepMonitoring.java:98   | CURVES
+2026-01-02 17:00:13,180 INFO [input#1]         SlursBuilder.java:240  | Slurs: 4
+2026-01-02 17:00:13,193 INFO [input#1]      SegmentsBuilder.java:155  | Segments: 0
+2026-01-02 17:00:13,197 INFO [input#1]       StepMonitoring.java:98   | SYMBOLS
+2026-01-02 17:00:13,573 INFO [input#1]       StepMonitoring.java:98   | LINKS
+2026-01-02 17:00:13,605 INFO [input#1]        SentenceInter.java:461  | No chord near SentenceInter#8365{(0.620) staff:7 mFont:B-54 Direction} —-"-=
+2026-01-02 17:00:13,613 INFO [input#1]       StepMonitoring.java:98   | RHYTHMS
+2026-01-02 17:00:13,693 INFO [input#1]       StepMonitoring.java:98   | PAGE
+2026-01-02 17:00:13,701 INFO [input#1]                 Book.java:2550 | Book{input} storing
+2026-01-02 17:00:13,736 INFO [input#1]                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:00:13,883 INFO [input#1]           DataHolder.java:348  | Stored /sheet#1/BINARY.png
+2026-01-02 17:00:14,388 INFO [input#1]                Sheet.java:1561 | Stored /sheet#1/sheet#1.xml
+2026-01-02 17:00:14,388 INFO [input#1]                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:00:14,393 INFO [input#1]            SheetStub.java:1644 | Disposed sheet#1
+2026-01-02 17:00:14,426 INFO [input#1]                 Book.java:2018 | End of Stub#1 memory: 31,295,064
+2026-01-02 17:00:14,428 INFO [input#2]       StepMonitoring.java:98   | LOAD
+2026-01-02 17:00:14,578 INFO [input#2]            SheetStub.java:1268 | Loaded image #2 2478x3507 from C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:00:14,578 INFO [input#2]       StepMonitoring.java:98   | BINARY
+2026-01-02 17:00:14,851 INFO [input#2]       StepMonitoring.java:98   | SCALE
+2026-01-02 17:00:14,868 INFO [input#2]         ScaleBuilder.java:241  | Beam  guessed height: 10 -- 0.50 of 19 interline
+2026-01-02 17:00:14,868 INFO [input#2]         ScaleBuilder.java:264  | Beam measured height: 11 -- 0.43 of [5..19] range at 618% of needed quorum
+2026-01-02 17:00:14,868 INFO [input#2]            ScaleStep.java:65   | Scale{ interline(17,19,20) line(2,3,5) beam(11)}
+2026-01-02 17:00:14,868 INFO [input#2]       StepMonitoring.java:98   | GRID
+2026-01-02 17:00:15,053 INFO [input#2]       LinesRetriever.java:1500 | Global slope: 0.00000
+2026-01-02 17:00:15,068 INFO [input#2]    ClustersRetriever.java:328  | Retrieved raw line clusters: 12 of sizes [5] with interline(17,19,20)
+2026-01-02 17:00:15,183 INFO [input#2]            PeakGraph.java:310  | Systems: #1[1, 2] #2[3, 4] #3[5, 6] #4[7, 8] #5[9, 10] #6[11, 12]
+2026-01-02 17:00:15,360 INFO [input#2]        SystemManager.java:779  | 1 part along 6 systems
+2026-01-02 17:00:15,361 INFO [input#2]       StepMonitoring.java:98   | HEADERS
+2026-01-02 17:00:15,583 INFO [input#2]       StepMonitoring.java:98   | STEM_SEEDS
+2026-01-02 17:00:15,614 INFO [input#2]        StemSeedsStep.java:86   | stem(5 max:5)
+2026-01-02 17:00:15,627 INFO [input#2]       StepMonitoring.java:98   | BEAMS
+2026-01-02 17:00:18,383 INFO [input#2]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#9 at x:1259
+2026-01-02 17:00:18,384 INFO [input#2]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#9 at x:1406
+2026-01-02 17:00:18,424 INFO [input#2]       StepMonitoring.java:98   | LEDGERS
+2026-01-02 17:00:18,581 INFO [input#2]       StepMonitoring.java:98   | HEADS
+2026-01-02 17:00:22,839 INFO [input#2]        HeadSeedTally.java:235  | Scale information: HeadSeeds{NOTEHEAD_BLACK[L:-0.5,R:-1.0]}
+2026-01-02 17:00:22,840 INFO [input#2]       StepMonitoring.java:98   | STEMS
+2026-01-02 17:00:23,507 INFO [input#2]       StepMonitoring.java:98   | REDUCTION
+2026-01-02 17:00:23,599 INFO [input#2]        ReductionStep.java:105  | Stems free length median value: 60 pixels, 3.2 interlines
+2026-01-02 17:00:23,601 INFO [input#2]       StepMonitoring.java:98   | CUE_BEAMS
+2026-01-02 17:00:23,601 INFO [input#2]         CueBeamsStep.java:81   | Step CUE_BEAMS is skipped because small heads switch is off
+2026-01-02 17:00:23,601 INFO [input#2]       StepMonitoring.java:98   | TEXTS
+2026-01-02 17:00:24,024 INFO [input#2]       StepMonitoring.java:98   | MEASURES
+2026-01-02 17:00:24,024 INFO [input#2]                 Page.java:307  | 20 raw measures: [3 in system#1, 4 in system#2, 3 in system#3, 4 in system#4, 3 in system#5, 3 in system#6]
+2026-01-02 17:00:24,025 INFO [input#2]       StepMonitoring.java:98   | CHORDS
+2026-01-02 17:00:24,029 INFO [input#2]       StepMonitoring.java:98   | CURVES
+2026-01-02 17:00:24,624 INFO [input#2]         SlursBuilder.java:240  | Slurs: 8
+2026-01-02 17:00:24,627 INFO [input#2]      SegmentsBuilder.java:155  | Segments: 11
+2026-01-02 17:00:24,627 INFO [input#2]       StepMonitoring.java:98   | SYMBOLS
+2026-01-02 17:00:25,058 INFO [input#2]       StepMonitoring.java:98   | LINKS
+2026-01-02 17:00:25,058 INFO [input#2]        SymbolsLinker.java:257  | No chord linked to OctaveShiftInter#11863{(0.377) staff:1 OTTAVA ALTA}
+2026-01-02 17:00:25,067 INFO [input#2]        SymbolsLinker.java:287  | No chord above PedalInter#11933{(0.185) PEDAL_UP_MARK}
+2026-01-02 17:00:25,083 INFO [input#2]       StepMonitoring.java:98   | RHYTHMS
+2026-01-02 17:00:25,094 INFO [input#2]           PageRhythm.java:199  | {Page#2.1} Time value reused from sheet#1
+2026-01-02 17:00:25,117 INFO [input#2]        MeasureRhythm.java:1277 | Measure{#18} Time inconsistency in {5/8=[HeadChordInter#10743{(0.943/0.943) staff:12 slot#7 off:5/8 dur:1/16}], 21/32=[HeadChordInter#10715{(0.936/0.936) staff:11 slot#7 off:21/32 dur:1/16}]}
+2026-01-02 17:00:25,118 INFO [input#2]        MeasureRhythm.java:1277 | Measure{#18} Time inconsistency in {11/16=[HeadChordInter#10744{(0.927/0.927) staff:12 slot#8 off:11/16 dur:1/16}], 23/32=[HeadChordInter#10716{(0.953/0.953) staff:11 slot#8 off:23/32 dur:1/16}]}
+2026-01-02 17:00:25,118 INFO [input#2]       StepMonitoring.java:98   | PAGE
+2026-01-02 17:00:25,118 INFO [input#2]       SheetReduction.java:154  | Gutter. Different glyphs 5/6 ArticulationInter#11986{(0.776/0.889) STACCATO} vs ArticulationInter#12141{(0.799/0.900) STACCATO}
+2026-01-02 17:00:25,118 INFO [input#2]       SheetReduction.java:154  | Gutter. Different glyphs 5/6 PedalInter#11985{(0.777/0.777) PEDAL_MARK} vs ArticulationInter#12141{(0.799/0.900) STACCATO}
+2026-01-02 17:00:25,118 INFO [input#2]                 Book.java:2550 | Book{input} storing
+2026-01-02 17:00:25,152 INFO [input#2]                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:00:25,193 INFO [input#2]           DataHolder.java:348  | Stored /sheet#2/BINARY.png
+2026-01-02 17:00:25,444 INFO [input#2]                Sheet.java:1561 | Stored /sheet#2/sheet#2.xml
+2026-01-02 17:00:25,444 INFO [input#2]                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:00:25,450 INFO [input#2]            SheetStub.java:1644 | Disposed sheet#2
+2026-01-02 17:00:25,466 INFO [input#2]                 Book.java:2018 | End of Stub#2 memory: 30,926,160
+2026-01-02 17:00:25,466 INFO [input#3]       StepMonitoring.java:98   | LOAD
+2026-01-02 17:00:25,566 INFO [input#3]            SheetStub.java:1268 | Loaded image #3 2478x3507 from C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:00:25,566 INFO [input#3]       StepMonitoring.java:98   | BINARY
+2026-01-02 17:00:25,753 INFO [input#3]       StepMonitoring.java:98   | SCALE
+2026-01-02 17:00:25,753 INFO [input#3]         ScaleBuilder.java:241  | Beam  guessed height: 10 -- 0.50 of 19 interline
+2026-01-02 17:00:25,753 INFO [input#3]         ScaleBuilder.java:264  | Beam measured height: 11 -- 0.43 of [5..19] range at 603% of needed quorum
+2026-01-02 17:00:25,753 INFO [input#3]            ScaleStep.java:65   | Scale{ interline(17,19,20) line(2,3,5) beam(11)}
+2026-01-02 17:00:25,753 INFO [input#3]       StepMonitoring.java:98   | GRID
+2026-01-02 17:00:25,833 INFO [input#3]       LinesRetriever.java:1500 | Global slope: 0.00000
+2026-01-02 17:00:25,849 INFO [input#3]    ClustersRetriever.java:328  | Retrieved raw line clusters: 12 of sizes [5] with interline(17,19,20)
+2026-01-02 17:00:25,873 INFO [input#3]            PeakGraph.java:310  | Systems: #1[1, 2] #2[3, 4] #3[5, 6] #4[7, 8] #5[9, 10] #6[11, 12]
+2026-01-02 17:00:25,984 INFO [input#3]        SystemManager.java:779  | 1 part along 6 systems
+2026-01-02 17:00:25,984 INFO [input#3]       StepMonitoring.java:98   | HEADERS
+2026-01-02 17:00:26,151 INFO [input#3]       StepMonitoring.java:98   | STEM_SEEDS
+2026-01-02 17:00:26,178 INFO [input#3]        StemSeedsStep.java:86   | stem(5 max:6)
+2026-01-02 17:00:26,183 INFO [input#3]       StepMonitoring.java:98   | BEAMS
+2026-01-02 17:00:28,133 INFO [input#3]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#12 at x:1401
+2026-01-02 17:00:28,133 INFO [input#3]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#12 at x:1541
+2026-01-02 17:00:28,135 INFO [input#3]       StepMonitoring.java:98   | LEDGERS
+2026-01-02 17:00:28,204 INFO [input#3]       StepMonitoring.java:98   | HEADS
+2026-01-02 17:00:31,389 INFO [input#3]        HeadSeedTally.java:235  | Scale information: HeadSeeds{NOTEHEAD_VOID[L:0.4] NOTEHEAD_BLACK[L:-0.7,R:-0.9]}
+2026-01-02 17:00:31,389 INFO [input#3]       StepMonitoring.java:98   | STEMS
+2026-01-02 17:00:31,736 INFO [input#3]       StepMonitoring.java:98   | REDUCTION
+2026-01-02 17:00:31,792 INFO [input#3]        ReductionStep.java:105  | Stems free length median value: 59 pixels, 3.1 interlines
+2026-01-02 17:00:31,795 INFO [input#3]       StepMonitoring.java:98   | CUE_BEAMS
+2026-01-02 17:00:31,795 INFO [input#3]         CueBeamsStep.java:81   | Step CUE_BEAMS is skipped because small heads switch is off
+2026-01-02 17:00:31,795 INFO [input#3]       StepMonitoring.java:98   | TEXTS
+2026-01-02 17:00:32,079 INFO [input#3]       StepMonitoring.java:98   | MEASURES
+2026-01-02 17:00:32,080 INFO [input#3]                 Page.java:307  | 20 raw measures: [4 in system#1, 4 in system#2, 3 in system#3, 3 in system#4, 3 in system#5, 3 in system#6]
+2026-01-02 17:00:32,080 INFO [input#3]       StepMonitoring.java:98   | CHORDS
+2026-01-02 17:00:32,084 INFO [input#3]       StepMonitoring.java:98   | CURVES
+2026-01-02 17:00:32,469 INFO [input#3]         SlursBuilder.java:240  | Slurs: 14
+2026-01-02 17:00:32,470 INFO [input#3]      SegmentsBuilder.java:155  | Segments: 4
+2026-01-02 17:00:32,470 INFO [input#3]       StepMonitoring.java:98   | SYMBOLS
+2026-01-02 17:00:32,756 INFO [input#3]       StepMonitoring.java:98   | LINKS
+2026-01-02 17:00:32,756 INFO [input#3]        SentenceInter.java:461  | No chord near SentenceInter#9449{(0.584) staff:1 mFont:B-40 Direction} h b
+2026-01-02 17:00:32,784 INFO [input#3]        SymbolsLinker.java:287  | No chord above PedalInter#11210{(0.394) PEDAL_UP_MARK}
+2026-01-02 17:00:32,784 INFO [input#3]        SymbolsLinker.java:287  | No chord above PedalInter#11228{(0.291) PEDAL_UP_MARK}
+2026-01-02 17:00:32,793 INFO [input#3]       StepMonitoring.java:98   | RHYTHMS
+2026-01-02 17:00:32,793 INFO [input#3]           PageRhythm.java:199  | {Page#3.1} Time value reused from sheet#1
+2026-01-02 17:00:32,793 INFO [input#3]        MeasureRhythm.java:1045 | Measure{#3} No timeOffset for HeadChordInter#9545{(0.946/0.946) staff:1 slot#6 dur:1/4}
+2026-01-02 17:00:32,793 INFO [input#3]                Voice.java:257  | Measure{#3} Voice{#1 excess:1/8} too long
+2026-01-02 17:00:32,793 INFO [input#3]          StackRhythm.java:224  | S1 MeasureStack#3 no correct rhythm
+2026-01-02 17:00:32,798 INFO [input#3]        MeasureRhythm.java:1045 | Measure{#5} No timeOffset for HeadChordInter#9586{(0.937/0.937) staff:3 slot#8 dur:1/4}
+2026-01-02 17:00:32,798 INFO [input#3]   AbstractChordInter.java:627  | Measure{#5} No timeOffset for HeadChordInter#9586{(0.937/0.937) staff:3 slot#8 dur:1/4}
+2026-01-02 17:00:32,798 INFO [input#3]   AbstractChordInter.java:627  | Measure{#5} No timeOffset for HeadChordInter#9588{(0.936/0.936) staff:3 slot#10 dur:1/16}
+2026-01-02 17:00:32,798 INFO [input#3]                Voice.java:257  | Measure{#5} Voice{#5 excess:1/4} too long
+2026-01-02 17:00:32,798 INFO [input#3]          StackRhythm.java:224  | S2 MeasureStack#5 no correct rhythm
+2026-01-02 17:00:32,814 INFO [input#3]       StepMonitoring.java:98   | PAGE
+2026-01-02 17:00:32,815 INFO [input#3]                Voice.java:257  | Measure{#3} Voice{#1 excess:1/8} too long
+2026-01-02 17:00:32,815 INFO [input#3]                Voice.java:257  | Measure{#5} Voice{#5 excess:1/4} too long
+2026-01-02 17:00:32,816 INFO [input#3]                 Book.java:2550 | Book{input} storing
+2026-01-02 17:00:32,841 INFO [input#3]                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:00:32,885 INFO [input#3]           DataHolder.java:348  | Stored /sheet#3/BINARY.png
+2026-01-02 17:00:33,099 INFO [input#3]                Sheet.java:1561 | Stored /sheet#3/sheet#3.xml
+2026-01-02 17:00:33,099 INFO [input#3]                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:00:33,104 INFO [input#3]            SheetStub.java:1644 | Disposed sheet#3
+2026-01-02 17:00:33,124 INFO [input#3]                 Book.java:2018 | End of Stub#3 memory: 31,100,648
+2026-01-02 17:00:33,124 INFO [input#4]       StepMonitoring.java:98   | LOAD
+2026-01-02 17:00:33,214 INFO [input#4]            SheetStub.java:1268 | Loaded image #4 2478x3507 from C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:00:33,214 INFO [input#4]       StepMonitoring.java:98   | BINARY
+2026-01-02 17:00:33,406 INFO [input#4]       StepMonitoring.java:98   | SCALE
+2026-01-02 17:00:33,406 INFO [input#4]         ScaleBuilder.java:241  | Beam  guessed height: 10 -- 0.50 of 19 interline
+2026-01-02 17:00:33,406 INFO [input#4]         ScaleBuilder.java:264  | Beam measured height: 11 -- 0.43 of [5..19] range at 604% of needed quorum
+2026-01-02 17:00:33,406 INFO [input#4]            ScaleStep.java:65   | Scale{ interline(17,19,20) line(3,3,5) beam(11)}
+2026-01-02 17:00:33,406 INFO [input#4]       StepMonitoring.java:98   | GRID
+2026-01-02 17:00:33,487 INFO [input#4]       LinesRetriever.java:1500 | Global slope: 0.00000
+2026-01-02 17:00:33,494 INFO [input#4]    ClustersRetriever.java:328  | Retrieved raw line clusters: 12 of sizes [5] with interline(17,19,20)
+2026-01-02 17:00:33,528 INFO [input#4]            PeakGraph.java:310  | Systems: #1[1, 2] #2[3, 4] #3[5, 6] #4[7, 8] #5[9, 10] #6[11, 12]
+2026-01-02 17:00:33,633 INFO [input#4]        SystemManager.java:779  | 1 part along 6 systems
+2026-01-02 17:00:33,634 INFO [input#4]       StepMonitoring.java:98   | HEADERS
+2026-01-02 17:00:33,794 INFO [input#4]       StepMonitoring.java:98   | STEM_SEEDS
+2026-01-02 17:00:33,824 INFO [input#4]        StemSeedsStep.java:86   | stem(5 max:5)
+2026-01-02 17:00:33,824 INFO [input#4]       StepMonitoring.java:98   | BEAMS
+2026-01-02 17:00:35,697 INFO [input#4]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#12 at x:1401
+2026-01-02 17:00:35,697 INFO [input#4]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#12 at x:1541
+2026-01-02 17:00:35,697 INFO [input#4]       StepMonitoring.java:98   | LEDGERS
+2026-01-02 17:00:35,769 INFO [input#4]       StepMonitoring.java:98   | HEADS
+2026-01-02 17:00:38,714 INFO [input#4]        HeadSeedTally.java:235  | Scale information: HeadSeeds{NOTEHEAD_VOID[L:-0.1] NOTEHEAD_BLACK[L:-0.5,R:-0.9]}
+2026-01-02 17:00:38,714 INFO [input#4]       StepMonitoring.java:98   | STEMS
+2026-01-02 17:00:39,039 INFO [input#4]       StepMonitoring.java:98   | REDUCTION
+2026-01-02 17:00:39,089 INFO [input#4]        ReductionStep.java:105  | Stems free length median value: 60 pixels, 3.2 interlines
+2026-01-02 17:00:39,089 INFO [input#4]       StepMonitoring.java:98   | CUE_BEAMS
+2026-01-02 17:00:39,089 INFO [input#4]         CueBeamsStep.java:81   | Step CUE_BEAMS is skipped because small heads switch is off
+2026-01-02 17:00:39,089 INFO [input#4]       StepMonitoring.java:98   | TEXTS
+2026-01-02 17:00:39,361 INFO [input#4]             TextWord.java:268  |    Abnormal font ratio 2.63 TextWord{ ",'%" bounds[1330,1340,140,60] conf:0.52 base[1330,1400]-[1470,1400] codes[2c,27,25] FontInfo{Verdana_Bold B-41}}
+2026-01-02 17:00:39,364 INFO [input#4]       StepMonitoring.java:98   | MEASURES
+2026-01-02 17:00:39,364 INFO [input#4]                 Page.java:307  | 20 raw measures: [3 in system#1, 4 in system#2, 4 in system#3, 3 in system#4, 3 in system#5, 3 in system#6]
+2026-01-02 17:00:39,364 INFO [input#4]       StepMonitoring.java:98   | CHORDS
+2026-01-02 17:00:39,364 INFO [input#4]       StepMonitoring.java:98   | CURVES
+2026-01-02 17:00:39,764 INFO [input#4]         SlursBuilder.java:240  | Slurs: 15
+2026-01-02 17:00:39,766 INFO [input#4]      SegmentsBuilder.java:155  | Segments: 8
+2026-01-02 17:00:39,766 INFO [input#4]       StepMonitoring.java:98   | SYMBOLS
+2026-01-02 17:00:39,937 INFO [input#4]       StepMonitoring.java:98   | LINKS
+2026-01-02 17:00:39,937 INFO [input#4]        SymbolsLinker.java:287  | No chord above PedalInter#10724{(0.515) PEDAL_UP_MARK}
+2026-01-02 17:00:39,941 INFO [input#4]        SymbolsLinker.java:287  | No chord above PedalInter#10781{(0.164) PEDAL_MARK}
+2026-01-02 17:00:39,951 INFO [input#4]        SymbolsLinker.java:287  | No chord above PedalInter#10938{(0.394) PEDAL_UP_MARK}
+2026-01-02 17:00:39,955 INFO [input#4]        SymbolsLinker.java:287  | No chord above PedalInter#10956{(0.291) PEDAL_UP_MARK}
+2026-01-02 17:00:39,958 INFO [input#4]       StepMonitoring.java:98   | RHYTHMS
+2026-01-02 17:00:39,958 INFO [input#4]           PageRhythm.java:199  | {Page#4.1} Time value reused from sheet#1
+2026-01-02 17:00:39,961 INFO [input#4]                Voice.java:257  | Measure{#4} Voice{#1 excess:1/8} too long
+2026-01-02 17:00:39,961 INFO [input#4]          StackRhythm.java:224  | S2 MeasureStack#4 no correct rhythm
+2026-01-02 17:00:39,964 INFO [input#4]        MeasureRhythm.java:1045 | Measure{#5} No timeOffset for HeadChordInter#9482{(0.935/0.935) staff:3 slot#8 dur:1/4}
+2026-01-02 17:00:39,964 INFO [input#4]   AbstractChordInter.java:627  | Measure{#5} No timeOffset for HeadChordInter#9482{(0.935/0.935) staff:3 slot#8 dur:1/4}
+2026-01-02 17:00:39,964 INFO [input#4]        MeasureRhythm.java:1045 | Measure{#5} No timeOffset for HeadChordInter#9505{(0.709/0.709) staff:4 slot#9 dur:1/2}
+2026-01-02 17:00:39,964 INFO [input#4]   AbstractChordInter.java:627  | Measure{#5} No timeOffset for HeadChordInter#9484{(0.939/0.939) staff:3 slot#10 dur:1/16}
+2026-01-02 17:00:39,964 INFO [input#4]   AbstractChordInter.java:627  | Measure{#5} No timeOffset for HeadChordInter#9505{(0.709/0.709) staff:4 slot#9 dur:1/2}
+2026-01-02 17:00:39,964 INFO [input#4]                Voice.java:257  | Measure{#5} Voice{#5 excess:1/4} too long
+2026-01-02 17:00:39,964 INFO [input#4]          StackRhythm.java:224  | S2 MeasureStack#5 no correct rhythm
+2026-01-02 17:00:39,964 INFO [input#4]        MeasureRhythm.java:1045 | Measure{#10} No timeOffset for HeadChordInter#9549{(0.935/0.935) staff:5 slot#10 dur:1/8}
+2026-01-02 17:00:39,964 INFO [input#4]   AbstractChordInter.java:627  | Measure{#10} No timeOffset for HeadChordInter#9550{(0.945/0.945) staff:5 slot#11 dur:1/8}
+2026-01-02 17:00:39,964 INFO [input#4]                Voice.java:257  | Measure{#10} Voice{#5 excess:1/4} too long
+2026-01-02 17:00:39,964 INFO [input#4]                Voice.java:257  | Measure{#10} Voice{#2 excess:1/8} too long
+2026-01-02 17:00:39,964 INFO [input#4]          StackRhythm.java:224  | S3 MeasureStack#10 no correct rhythm
+2026-01-02 17:00:39,977 INFO [input#4]       StepMonitoring.java:98   | PAGE
+2026-01-02 17:00:39,978 INFO [input#4]                Voice.java:257  | Measure{#4} Voice{#1 excess:1/8} too long
+2026-01-02 17:00:39,978 INFO [input#4]                Voice.java:257  | Measure{#5} Voice{#5 excess:1/4} too long
+2026-01-02 17:00:39,978 INFO [input#4]                Voice.java:257  | Measure{#10} Voice{#2 excess:1/8} too long
+2026-01-02 17:00:39,978 INFO [input#4]                Voice.java:257  | Measure{#10} Voice{#5 excess:1/4} too long
+2026-01-02 17:00:39,978 INFO [input#4]                 Book.java:2550 | Book{input} storing
+2026-01-02 17:00:40,004 INFO [input#4]                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:00:40,044 INFO [input#4]           DataHolder.java:348  | Stored /sheet#4/BINARY.png
+2026-01-02 17:00:40,264 INFO [input#4]                Sheet.java:1561 | Stored /sheet#4/sheet#4.xml
+2026-01-02 17:00:40,264 INFO [input#4]                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:00:40,264 INFO [input#4]            SheetStub.java:1644 | Disposed sheet#4
+2026-01-02 17:00:40,294 INFO [input#4]                 Book.java:2018 | End of Stub#4 memory: 31,111,160
+2026-01-02 17:00:40,295 INFO [input#5]       StepMonitoring.java:98   | LOAD
+2026-01-02 17:00:40,375 INFO [input#5]            SheetStub.java:1268 | Loaded image #5 2478x3507 from C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:00:40,375 INFO [input#5]       StepMonitoring.java:98   | BINARY
+2026-01-02 17:00:40,577 INFO [input#5]       StepMonitoring.java:98   | SCALE
+2026-01-02 17:00:40,577 INFO [input#5]         ScaleBuilder.java:241  | Beam  guessed height: 10 -- 0.50 of 19 interline
+2026-01-02 17:00:40,578 INFO [input#5]         ScaleBuilder.java:264  | Beam measured height: 11 -- 0.43 of [5..19] range at 702% of needed quorum
+2026-01-02 17:00:40,578 INFO [input#5]            ScaleStep.java:65   | Scale{ interline(17,19,20) line(2,3,4) beam(11)}
+2026-01-02 17:00:40,578 INFO [input#5]       StepMonitoring.java:98   | GRID
+2026-01-02 17:00:40,662 INFO [input#5]       LinesRetriever.java:1500 | Global slope: 0.00000
+2026-01-02 17:00:40,669 INFO [input#5]    ClustersRetriever.java:328  | Retrieved raw line clusters: 12 of sizes [5] with interline(17,19,20)
+2026-01-02 17:00:40,692 INFO [input#5]            PeakGraph.java:310  | Systems: #1[1, 2] #2[3, 4] #3[5, 6] #4[7, 8] #5[9, 10] #6[11, 12]
+2026-01-02 17:00:40,784 INFO [input#5]        SystemManager.java:779  | 1 part along 6 systems
+2026-01-02 17:00:40,784 INFO [input#5]       StepMonitoring.java:98   | HEADERS
+2026-01-02 17:00:40,938 INFO [input#5]       StepMonitoring.java:98   | STEM_SEEDS
+2026-01-02 17:00:40,966 INFO [input#5]        StemSeedsStep.java:86   | stem(5 max:6)
+2026-01-02 17:00:40,974 INFO [input#5]       StepMonitoring.java:98   | BEAMS
+2026-01-02 17:00:42,767 INFO [input#5]       StepMonitoring.java:98   | LEDGERS
+2026-01-02 17:00:42,829 INFO [input#5]       StepMonitoring.java:98   | HEADS
+2026-01-02 17:00:45,671 INFO [input#5]        HeadSeedTally.java:235  | Scale information: HeadSeeds{NOTEHEAD_BLACK[L:-0.5,R:-0.8]}
+2026-01-02 17:00:45,671 INFO [input#5]       StepMonitoring.java:98   | STEMS
+2026-01-02 17:00:46,039 INFO [input#5]       StepMonitoring.java:98   | REDUCTION
+2026-01-02 17:00:46,084 INFO [input#5]        ReductionStep.java:105  | Stems free length median value: 63 pixels, 3.3 interlines
+2026-01-02 17:00:46,084 INFO [input#5]       StepMonitoring.java:98   | CUE_BEAMS
+2026-01-02 17:00:46,084 INFO [input#5]         CueBeamsStep.java:81   | Step CUE_BEAMS is skipped because small heads switch is off
+2026-01-02 17:00:46,084 INFO [input#5]       StepMonitoring.java:98   | TEXTS
+2026-01-02 17:00:46,364 INFO [input#5]       StepMonitoring.java:98   | MEASURES
+2026-01-02 17:00:46,364 INFO [input#5]                 Page.java:307  | 20 raw measures: [3 in system#1, 4 in system#2, 4 in system#3, 4 in system#4, 3 in system#5, 2 in system#6]
+2026-01-02 17:00:46,364 INFO [input#5]       StepMonitoring.java:98   | CHORDS
+2026-01-02 17:00:46,369 INFO [input#5]       StepMonitoring.java:98   | CURVES
+2026-01-02 17:00:46,724 INFO [input#5]         SlursBuilder.java:240  | Slurs: 9
+2026-01-02 17:00:46,728 INFO [input#5]      SegmentsBuilder.java:155  | Segments: 9
+2026-01-02 17:00:46,728 INFO [input#5]       StepMonitoring.java:98   | SYMBOLS
+2026-01-02 17:00:46,889 INFO [input#5]       StepMonitoring.java:98   | LINKS
+2026-01-02 17:00:46,894 INFO [input#5]        SymbolsLinker.java:287  | No chord above PedalInter#11274{(0.617) PEDAL_UP_MARK}
+2026-01-02 17:00:46,899 INFO [input#5]        SymbolsLinker.java:287  | No chord above PedalInter#11411{(0.304) PEDAL_UP_MARK}
+2026-01-02 17:00:46,909 INFO [input#5]       StepMonitoring.java:98   | RHYTHMS
+2026-01-02 17:00:46,909 INFO [input#5]           PageRhythm.java:199  | {Page#5.1} Time value reused from sheet#1
+2026-01-02 17:00:46,909 INFO [input#5]                Voice.java:257  | Measure{#4} Voice{#1 excess:1/8} too long
+2026-01-02 17:00:46,909 INFO [input#5]                Voice.java:257  | Measure{#4} Voice{#7 excess:1/8} too long
+2026-01-02 17:00:46,909 INFO [input#5]          StackRhythm.java:224  | S2 MeasureStack#4 no correct rhythm
+2026-01-02 17:00:46,909 INFO [input#5]                Voice.java:257  | Measure{#6} Voice{#7 excess:1/8} too long
+2026-01-02 17:00:46,914 INFO [input#5]                Voice.java:257  | Measure{#6} Voice{#2 excess:1/8} too long
+2026-01-02 17:00:46,914 INFO [input#5]          StackRhythm.java:224  | S2 MeasureStack#6 no correct rhythm
+2026-01-02 17:00:46,925 INFO [input#5]       StepMonitoring.java:98   | PAGE
+2026-01-02 17:00:46,925 INFO [input#5]                Voice.java:257  | Measure{#4} Voice{#1 excess:1/8} too long
+2026-01-02 17:00:46,925 INFO [input#5]                Voice.java:257  | Measure{#4} Voice{#7 excess:1/8} too long
+2026-01-02 17:00:46,925 INFO [input#5]                Voice.java:257  | Measure{#6} Voice{#2 excess:1/8} too long
+2026-01-02 17:00:46,925 INFO [input#5]                Voice.java:257  | Measure{#6} Voice{#7 excess:1/8} too long
+2026-01-02 17:00:46,928 INFO [input#5]                 Book.java:2550 | Book{input} storing
+2026-01-02 17:00:46,954 INFO [input#5]                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:00:46,994 INFO [input#5]           DataHolder.java:348  | Stored /sheet#5/BINARY.png
+2026-01-02 17:00:47,207 INFO [input#5]                Sheet.java:1561 | Stored /sheet#5/sheet#5.xml
+2026-01-02 17:00:47,208 INFO [input#5]                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:00:47,213 INFO [input#5]            SheetStub.java:1644 | Disposed sheet#5
+2026-01-02 17:00:47,234 INFO [input#5]                 Book.java:2018 | End of Stub#5 memory: 31,136,632
+2026-01-02 17:00:47,235 INFO [input#6]       StepMonitoring.java:98   | LOAD
+2026-01-02 17:00:47,317 INFO [input#6]            SheetStub.java:1268 | Loaded image #6 2478x3507 from C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:00:47,318 INFO [input#6]       StepMonitoring.java:98   | BINARY
+2026-01-02 17:00:47,504 INFO [input#6]       StepMonitoring.java:98   | SCALE
+2026-01-02 17:00:47,504 INFO [input#6]         ScaleBuilder.java:241  | Beam  guessed height: 10 -- 0.50 of 19 interline
+2026-01-02 17:00:47,504 INFO [input#6]         ScaleBuilder.java:264  | Beam measured height: 11 -- 0.43 of [5..19] range at 614% of needed quorum
+2026-01-02 17:00:47,504 INFO [input#6]            ScaleStep.java:65   | Scale{ interline(17,19,20) line(2,3,5) beam(11)}
+2026-01-02 17:00:47,504 INFO [input#6]       StepMonitoring.java:98   | GRID
+2026-01-02 17:00:47,589 INFO [input#6]       LinesRetriever.java:1500 | Global slope: 0.00000
+2026-01-02 17:00:47,589 INFO [input#6]    ClustersRetriever.java:328  | Retrieved raw line clusters: 12 of sizes [5] with interline(17,19,20)
+2026-01-02 17:00:47,620 INFO [input#6]            PeakGraph.java:310  | Systems: #1[1, 2] #2[3, 4] #3[5, 6] #4[7, 8] #5[9, 10] #6[11, 12]
+2026-01-02 17:00:47,724 INFO [input#6]        SystemManager.java:779  | 1 part along 6 systems
+2026-01-02 17:00:47,724 INFO [input#6]       StepMonitoring.java:98   | HEADERS
+2026-01-02 17:00:47,870 INFO [input#6]       StepMonitoring.java:98   | STEM_SEEDS
+2026-01-02 17:00:47,897 INFO [input#6]        StemSeedsStep.java:86   | stem(5 max:5)
+2026-01-02 17:00:47,903 INFO [input#6]       StepMonitoring.java:98   | BEAMS
+2026-01-02 17:00:49,721 INFO [input#6]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#9 at x:1259
+2026-01-02 17:00:49,721 INFO [input#6]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#9 at x:1406
+2026-01-02 17:00:49,744 INFO [input#6]       StepMonitoring.java:98   | LEDGERS
+2026-01-02 17:00:49,831 INFO [input#6]       StepMonitoring.java:98   | HEADS
+2026-01-02 17:00:52,748 INFO [input#6]        HeadSeedTally.java:235  | Scale information: HeadSeeds{NOTEHEAD_BLACK[L:-0.5,R:-0.9]}
+2026-01-02 17:00:52,748 INFO [input#6]       StepMonitoring.java:98   | STEMS
+2026-01-02 17:00:53,154 INFO [input#6]       StepMonitoring.java:98   | REDUCTION
+2026-01-02 17:00:53,214 INFO [input#6]        ReductionStep.java:105  | Stems free length median value: 60 pixels, 3.2 interlines
+2026-01-02 17:00:53,214 INFO [input#6]       StepMonitoring.java:98   | CUE_BEAMS
+2026-01-02 17:00:53,214 INFO [input#6]         CueBeamsStep.java:81   | Step CUE_BEAMS is skipped because small heads switch is off
+2026-01-02 17:00:53,214 INFO [input#6]       StepMonitoring.java:98   | TEXTS
+2026-01-02 17:00:53,549 INFO [input#6]       StepMonitoring.java:98   | MEASURES
+2026-01-02 17:00:53,549 INFO [input#6]                 Page.java:307  | 20 raw measures: [3 in system#1, 4 in system#2, 3 in system#3, 4 in system#4, 3 in system#5, 3 in system#6]
+2026-01-02 17:00:53,549 INFO [input#6]       StepMonitoring.java:98   | CHORDS
+2026-01-02 17:00:53,551 INFO [input#6]       StepMonitoring.java:98   | CURVES
+2026-01-02 17:00:53,954 INFO [input#6]         SlursBuilder.java:240  | Slurs: 8
+2026-01-02 17:00:53,954 INFO [input#6]      SegmentsBuilder.java:155  | Segments: 5
+2026-01-02 17:00:53,954 INFO [input#6]       StepMonitoring.java:98   | SYMBOLS
+2026-01-02 17:00:54,209 INFO [input#6]       StepMonitoring.java:98   | LINKS
+2026-01-02 17:00:54,219 INFO [input#6]        SymbolsLinker.java:287  | No chord above PedalInter#11938{(0.185) PEDAL_UP_MARK}
+2026-01-02 17:00:54,221 INFO [input#6]        SymbolsLinker.java:287  | No chord above PedalInter#11988{(0.568) PEDAL_UP_MARK}
+2026-01-02 17:00:54,229 INFO [input#6]       StepMonitoring.java:98   | RHYTHMS
+2026-01-02 17:00:54,229 INFO [input#6]           PageRhythm.java:199  | {Page#6.1} Time value reused from sheet#1
+2026-01-02 17:00:54,244 INFO [input#6]        MeasureRhythm.java:1277 | Measure{#18} Time inconsistency in {5/8=[HeadChordInter#10754{(0.943/0.943) staff:12 slot#7 off:5/8 dur:1/16}], 21/32=[HeadChordInter#10726{(0.937/0.937) staff:11 slot#7 off:21/32 dur:1/16}]}
+2026-01-02 17:00:54,244 INFO [input#6]        MeasureRhythm.java:1277 | Measure{#18} Time inconsistency in {11/16=[HeadChordInter#10755{(0.949/0.949) staff:12 slot#8 off:11/16 dur:1/16}], 23/32=[HeadChordInter#10727{(0.953/0.953) staff:11 slot#8 off:23/32 dur:1/16}]}
+2026-01-02 17:00:54,244 INFO [input#6]       StepMonitoring.java:98   | PAGE
+2026-01-02 17:00:54,244 INFO [input#6]       SheetReduction.java:154  | Gutter. Different glyphs 5/6 ArticulationInter#11994{(0.776/0.889) STACCATO} vs ArticulationInter#12148{(0.799/0.900) STACCATO}
+2026-01-02 17:00:54,244 INFO [input#6]       SheetReduction.java:154  | Gutter. Different glyphs 5/6 PedalInter#11993{(0.768/0.768) PEDAL_MARK} vs ArticulationInter#12148{(0.799/0.900) STACCATO}
+2026-01-02 17:00:54,244 INFO [input#6]                 Book.java:2550 | Book{input} storing
+2026-01-02 17:00:54,275 INFO [input#6]                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:00:54,320 INFO [input#6]           DataHolder.java:348  | Stored /sheet#6/BINARY.png
+2026-01-02 17:00:54,549 INFO [input#6]                Sheet.java:1561 | Stored /sheet#6/sheet#6.xml
+2026-01-02 17:00:54,549 INFO [input#6]                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:00:54,554 INFO [input#6]            SheetStub.java:1644 | Disposed sheet#6
+2026-01-02 17:00:54,576 INFO [input#6]                 Book.java:2018 | End of Stub#6 memory: 31,167,608
+2026-01-02 17:00:54,576 INFO [input#7]       StepMonitoring.java:98   | LOAD
+2026-01-02 17:00:54,656 INFO [input#7]            SheetStub.java:1268 | Loaded image #7 2478x3507 from C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:00:54,656 INFO [input#7]       StepMonitoring.java:98   | BINARY
+2026-01-02 17:00:54,845 INFO [input#7]       StepMonitoring.java:98   | SCALE
+2026-01-02 17:00:54,845 INFO [input#7]         ScaleBuilder.java:241  | Beam  guessed height: 10 -- 0.50 of 19 interline
+2026-01-02 17:00:54,845 INFO [input#7]         ScaleBuilder.java:264  | Beam measured height: 11 -- 0.43 of [5..19] range at 558% of needed quorum
+2026-01-02 17:00:54,845 INFO [input#7]            ScaleStep.java:65   | Scale{ interline(17,19,20) line(3,3,5) beam(11)}
+2026-01-02 17:00:54,845 INFO [input#7]       StepMonitoring.java:98   | GRID
+2026-01-02 17:00:54,924 INFO [input#7]       LinesRetriever.java:1500 | Global slope: 0.00000
+2026-01-02 17:00:54,929 INFO [input#7]    ClustersRetriever.java:328  | Retrieved raw line clusters: 12 of sizes [5] with interline(17,19,20)
+2026-01-02 17:00:54,949 INFO [input#7]            PeakGraph.java:310  | Systems: #1[1, 2] #2[3, 4] #3[5, 6] #4[7, 8] #5[9, 10] #6[11, 12]
+2026-01-02 17:00:55,044 INFO [input#7]        SystemManager.java:779  | 1 part along 6 systems
+2026-01-02 17:00:55,044 INFO [input#7]       StepMonitoring.java:98   | HEADERS
+2026-01-02 17:00:55,189 INFO [input#7]       StepMonitoring.java:98   | STEM_SEEDS
+2026-01-02 17:00:55,220 INFO [input#7]        StemSeedsStep.java:86   | stem(5 max:5)
+2026-01-02 17:00:55,229 INFO [input#7]       StepMonitoring.java:98   | BEAMS
+2026-01-02 17:00:57,014 INFO [input#7]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#7 at x:1259
+2026-01-02 17:00:57,014 INFO [input#7]       StaffProjector.java:665  | Too high serif for multiple rest in Staff#7 at x:1406
+2026-01-02 17:00:57,064 INFO [input#7]       StepMonitoring.java:98   | LEDGERS
+2026-01-02 17:00:57,138 INFO [input#7]       StepMonitoring.java:98   | HEADS
+2026-01-02 17:01:00,070 INFO [input#7]        HeadSeedTally.java:235  | Scale information: HeadSeeds{NOTEHEAD_BLACK[L:-0.6,R:-0.9]}
+2026-01-02 17:01:00,070 INFO [input#7]       StepMonitoring.java:98   | STEMS
+2026-01-02 17:01:00,394 INFO [input#7]       StepMonitoring.java:98   | REDUCTION
+2026-01-02 17:01:00,437 INFO [input#7]        ReductionStep.java:105  | Stems free length median value: 61 pixels, 3.2 interlines
+2026-01-02 17:01:00,439 INFO [input#7]       StepMonitoring.java:98   | CUE_BEAMS
+2026-01-02 17:01:00,439 INFO [input#7]         CueBeamsStep.java:81   | Step CUE_BEAMS is skipped because small heads switch is off
+2026-01-02 17:01:00,439 INFO [input#7]       StepMonitoring.java:98   | TEXTS
+2026-01-02 17:01:00,774 INFO [input#7]       StepMonitoring.java:98   | MEASURES
+2026-01-02 17:01:00,775 INFO [input#7]                 Page.java:307  | 18 raw measures: [3 in system#1, 3 in system#2, 4 in system#3, 3 in system#4, 3 in system#5, 2 in system#6]
+2026-01-02 17:01:00,775 INFO [input#7]       StepMonitoring.java:98   | CHORDS
+2026-01-02 17:01:00,777 INFO [input#7]       StepMonitoring.java:98   | CURVES
+2026-01-02 17:01:01,119 INFO [input#7]         SlursBuilder.java:240  | Slurs: 2
+2026-01-02 17:01:01,119 INFO [input#7]      SegmentsBuilder.java:155  | Segments: 7
+2026-01-02 17:01:01,119 INFO [input#7]       StepMonitoring.java:98   | SYMBOLS
+2026-01-02 17:01:01,256 INFO [input#7]       StepMonitoring.java:98   | LINKS
+2026-01-02 17:01:01,262 INFO [input#7]        SymbolsLinker.java:287  | No chord above PedalInter#10556{(0.498) PEDAL_UP_MARK}
+2026-01-02 17:01:01,267 INFO [input#7]       StepMonitoring.java:98   | RHYTHMS
+2026-01-02 17:01:01,267 INFO [input#7]           PageRhythm.java:199  | {Page#7.1} Time value reused from sheet#1
+2026-01-02 17:01:01,274 INFO [input#7]                Voice.java:257  | Measure{#4} Voice{#5 excess:1/8} too long
+2026-01-02 17:01:01,274 INFO [input#7]                Voice.java:257  | Measure{#4} Voice{#6 excess:1/8} too long
+2026-01-02 17:01:01,274 INFO [input#7]          StackRhythm.java:224  | S2 MeasureStack#4 no correct rhythm
+2026-01-02 17:01:01,274 INFO [input#7]                Voice.java:257  | Measure{#5} Voice{#1 excess:3/8} too long
+2026-01-02 17:01:01,274 INFO [input#7]                Voice.java:257  | Measure{#5} Voice{#6 excess:1/8} too long
+2026-01-02 17:01:01,274 INFO [input#7]                Voice.java:257  | Measure{#5} Voice{#7 excess:3/8} too long
+2026-01-02 17:01:01,274 INFO [input#7]          StackRhythm.java:224  | S2 MeasureStack#5 no correct rhythm
+2026-01-02 17:01:01,279 INFO [input#7]                Voice.java:257  | Measure{#13} Voice{#1 excess:3/8} too long
+2026-01-02 17:01:01,279 INFO [input#7]                Voice.java:257  | Measure{#13} Voice{#6 excess:1/8} too long
+2026-01-02 17:01:01,279 INFO [input#7]                Voice.java:257  | Measure{#13} Voice{#7 excess:3/8} too long
+2026-01-02 17:01:01,283 INFO [input#7]          StackRhythm.java:224  | S4 MeasureStack#13 no correct rhythm
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#16} Voice{#6 excess:1/4} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#16} Voice{#3 excess:1/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#16} Voice{#4 excess:1/4} too long
+2026-01-02 17:01:01,284 INFO [input#7]          StackRhythm.java:224  | S5 MeasureStack#16 no correct rhythm
+2026-01-02 17:01:01,284 INFO [input#7]       StepMonitoring.java:98   | PAGE
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#4} Voice{#5 excess:1/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#4} Voice{#6 excess:1/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#5} Voice{#1 excess:3/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#5} Voice{#6 excess:1/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#5} Voice{#7 excess:3/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#13} Voice{#1 excess:3/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#13} Voice{#6 excess:1/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#13} Voice{#7 excess:3/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#16} Voice{#3 excess:1/8} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#16} Voice{#4 excess:1/4} too long
+2026-01-02 17:01:01,284 INFO [input#7]                Voice.java:257  | Measure{#16} Voice{#6 excess:1/4} too long
+2026-01-02 17:01:01,284 INFO [input#7]                 Book.java:2550 | Book{input} storing
+2026-01-02 17:01:01,314 INFO [input#7]                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:01:01,360 INFO [input#7]           DataHolder.java:348  | Stored /sheet#7/BINARY.png
+2026-01-02 17:01:01,564 INFO [input#7]                Sheet.java:1561 | Stored /sheet#7/sheet#7.xml
+2026-01-02 17:01:01,564 INFO [input#7]                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:01:01,564 INFO [input#7]            SheetStub.java:1644 | Disposed sheet#7
+2026-01-02 17:01:01,584 INFO [input#7]                 Book.java:2018 | End of Stub#7 memory: 31,195,448
+2026-01-02 17:01:01,584 INFO [input#8]       StepMonitoring.java:98   | LOAD
+2026-01-02 17:01:01,624 INFO [input#8]            SheetStub.java:1268 | Loaded image #8 2478x3507 from C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\samples\input.pdf
+2026-01-02 17:01:01,624 INFO [input#8]       StepMonitoring.java:98   | BINARY
+2026-01-02 17:01:01,794 INFO [input#8]       StepMonitoring.java:98   | SCALE
+2026-01-02 17:01:01,794 WARN [input#8]            SheetStub.java:412  | input#8
+
+Too few black pixels: 0.04% of whole image.
+This sheet is almost blank.
+
+2026-01-02 17:01:01,799 INFO [input#8]            SheetStub.java:1186 | Sheet input#8 flagged as invalid.
+2026-01-02 17:01:01,799 INFO [input#8]            SheetStub.java:385  | Sheet closed
+2026-01-02 17:01:01,799 INFO [input#8]            SheetStub.java:1394 | StepException cause detected in [LOAD, BINARY, SCALE, GRID, HEADERS, STEM_SEEDS, BEAMS, LEDGERS, HEADS, STEMS, REDUCTION, CUE_BEAMS, TEXTS, MEASURES, CHORDS, CURVES, SYMBOLS, LINKS, RHYTHMS, PAGE]
+2026-01-02 17:01:01,799 INFO [input#8]                 Book.java:2550 | Book{input} storing
+2026-01-02 17:01:01,804 INFO [input#8]                 Book.java:2531 | Stored /book.xml
+2026-01-02 17:01:01,844 INFO [input#8]           DataHolder.java:348  | Stored /sheet#8/BINARY.png
+2026-01-02 17:01:01,847 INFO [input#8]                Sheet.java:1561 | Stored /sheet#8/sheet#8.xml
+2026-01-02 17:01:01,847 INFO [input#8]                 Book.java:2491 | Book stored as C:\Users\Admin\Documents\Jianpu-tranpose-with-CV\audiveris_out\input.omr
+2026-01-02 17:01:01,847 INFO [input#8]            SheetStub.java:1644 | Disposed sheet#8
+2026-01-02 17:01:01,864 INFO [input#8]                 Book.java:2018 | End of Stub#8 memory: 31,196,272
+2026-01-02 17:01:01,864 INFO [input]                 Book.java:2025 | Book processed.
+2026-01-02 17:01:01,883 INFO [input]                Score.java:181  | Closing {Score 1}
